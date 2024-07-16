@@ -19,6 +19,7 @@ font-family: 'Pacifico', cursive;
 body,
 html {
     max-width: 100%;
+    max-height: 100%;
     background-color: #20abad;
     font-family: 'Poppins', sans-serif;
     color: #eeeaeb;
@@ -26,7 +27,6 @@ html {
 }
 
 a {
-    text-decoration: none;
     color: #eeeaeb;
 }
 
@@ -44,19 +44,125 @@ svg {
     max-height: 50px;
 }
 
+ul > li { /* Faux links */
+    cursor: pointer;
+}
+
+section {
+    background-image: url(../img/grapefruit-bg.webp);
+    background-size: cover;
+    background-position: center;
+}
+
 /* MOBILE VIEW */
+/*
+    TODO:
+        Margin on bottom button
+        dark orange accent to image
+*/
 
+nav {
+    margin-left: 1rem;
+}
 
+nav li:first-child {
+    margin: 1rem 0;
+}
+
+nav li:last-child {
+    margin-bottom: 1rem;
+}
+
+svg {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    max-width: 50%;
+    text-align: center;
+}
+
+.hero-text > h2 {
+    margin-top: 1.5rem;
+    font-size: 3rem;
+}
+
+.hero-text > p > a {
+    background-color: #20abad;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu > li {
+    margin-top:1rem;
+    text-decoration: underline;
+}
+
+.submenu {
+    padding-top:0;
+}
+.submenu > * {
+    margin: 0 0 1rem 1rem;
+    text-decoration: unset;
+}
 
 /* DESKTOP VIEW */
 @media screen and (min-width: 720px) {
-    body,
-    html {
-        background-color: #666;
+    nav {
+        padding-right: 1rem;
+    }
+
+    svg {
+        visibility: visible;
+        height: 15px;
+        width: 15px;
+    }
+
+    .menu {
+        flex-direction: row;
+        justify-content: space-between;
+        max-height: 4rem;
+        visibility:sticky;
+    }
+
+    .submenu {
+        visibility: collapse;
+    }
+
+    .submenu:hover {
+        visibility: visible;
     }
 }
 
 /* LARGEST VIEW */
 @media screen and (min-width: 1024px) {
-    
+    body, html {
+        background-color: #666e;
+    }
+    .menu {
+        flex-direction: row;
+        justify-content: space-around;
+        max-height: 4rem;
+        visibility:sticky;
+    }
+
+    .submenu {
+        visibility: collapse;
+    }
+
+    .submenu:hover {
+        visibility: visible;
+    }
 }
