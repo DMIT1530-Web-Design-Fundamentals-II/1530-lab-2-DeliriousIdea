@@ -49,6 +49,7 @@ ul > li { /* Faux links */
 }
 
 section {
+    z-index: 0;
     background-image: url(../img/grapefruit-bg.webp);
     background-size: cover;
     background-position: center;
@@ -122,8 +123,7 @@ svg {
 /*
     TODO:
         Full background image
-        Dropdown menus..
-        ul li ul and variants don't seem to want to be selected
+        Z-index
 */
 @media screen and (min-width: 720px) {
     nav {
@@ -143,17 +143,20 @@ svg {
         visibility:sticky;
     }
 
-    .submenu {
+    .hero-text > * {
+        z-index: 0;
+    }
+
+    .submenu {  
+        position: absolute;
         visibility: hidden;
     }
 
     ul li:hover > ul,
     ul li ul:hover {
+        z-index:1337; 
+        background-color: #ff8e2d;
         visibility:visible;
-    }
-
-    .submenu:hover {
-        visibility: visible;
     }
 }
 
@@ -161,28 +164,12 @@ svg {
 /*
     TODO:
         Full background image
-        Dropdown menus..
-        ul li ul and variants don't seem to want to be selected
+        Z-index
 */
 @media screen and (min-width: 1024px) {
-
-    svg {
-        position:relative;
-        right:7%;
-    }
-
     .menu {
-        flex-direction: row;
         justify-content: space-around;
         max-height: 4rem;
     }
 
-    .submenu {
-        visibility: hidden;
-    }
-
-    .menu li ul:hover
-    .submenu:hover {
-        visibility: visible;
-    }
 }
