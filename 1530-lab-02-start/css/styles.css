@@ -17,16 +17,25 @@ font-family: 'Pacifico', cursive;
 /* UNIVERSAL STYLES */
 
 body,
-html,
-a {
+html {
     max-width: 100%;
     background-color: #20abad;
     font-family: 'Poppins', sans-serif;
     color: #eeeaeb;
-    text-decoration: none;
+    
 }
 
-h1, h2 {
+a {
+    text-decoration: none;
+    color: #eeeaeb;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1,
+h2 {
     font-family: 'Pacifico', cursive;
 }
 
@@ -38,9 +47,13 @@ svg {
 /* MOBILE VIEW */
 
 
+
 /* DESKTOP VIEW */
 @media screen and (min-width: 720px) {
-
+    body,
+    html {
+        background-color: #666;
+    }
 }
 
 /* LARGEST VIEW */
