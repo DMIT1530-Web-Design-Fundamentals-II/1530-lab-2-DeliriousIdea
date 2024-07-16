@@ -119,6 +119,12 @@ svg {
 }
 
 /* DESKTOP VIEW */
+/*
+    TODO:
+        Full background image
+        Dropdown menus..
+        ul li ul and variants don't seem to want to be selected
+*/
 @media screen and (min-width: 720px) {
     nav {
         padding-right: 1rem;
@@ -152,18 +158,30 @@ svg {
 }
 
 /* LARGEST VIEW */
+/*
+    TODO:
+        Full background image
+        Dropdown menus..
+        ul li ul and variants don't seem to want to be selected
+*/
 @media screen and (min-width: 1024px) {
+
+    svg {
+        position:relative;
+        right:7%;
+    }
+
     .menu {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         max-height: 4rem;
-        visibility:sticky;
     }
 
     .submenu {
-        visibility: collapse;
+        visibility: hidden;
     }
 
+    .menu li ul:hover
     .submenu:hover {
         visibility: visible;
     }
