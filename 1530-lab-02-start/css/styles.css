@@ -16,6 +16,24 @@ font-family: 'Pacifico', cursive;
 
 /* UNIVERSAL STYLES */
 
+body,
+html,
+a {
+    max-width: 100%;
+    background-color: #20abad;
+    font-family: 'Poppins', sans-serif;
+    color: #eeeaeb;
+    text-decoration: none;
+}
+
+h1, h2 {
+    font-family: 'Pacifico', cursive;
+}
+
+svg {
+    max-width: 35px;
+    max-height: 50px;
+}
 
 /* MOBILE VIEW */
 
