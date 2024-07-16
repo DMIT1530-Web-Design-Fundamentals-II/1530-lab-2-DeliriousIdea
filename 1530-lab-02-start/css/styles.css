@@ -138,7 +138,12 @@ svg {
     }
 
     .submenu {
-        visibility: collapse;
+        visibility: hidden;
+    }
+
+    ul li:hover > ul,
+    ul li ul:hover {
+        visibility:visible;
     }
 
     .submenu:hover {
@@ -148,12 +153,9 @@ svg {
 
 /* LARGEST VIEW */
 @media screen and (min-width: 1024px) {
-    body, html {
-        background-color: #666e;
-    }
     .menu {
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         max-height: 4rem;
         visibility:sticky;
     }
